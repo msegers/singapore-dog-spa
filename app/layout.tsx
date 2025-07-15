@@ -5,14 +5,14 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/config/siteConfig";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: siteConfig.title,
+    template: `%s - ${siteConfig.title}`,
   },
   description: siteConfig.description,
   icons: {
@@ -48,15 +48,9 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
-              </Link>
+              <span className="text-default-600">
+                &copy; All rights reserved
+              </span>
             </footer>
           </div>
         </Providers>
